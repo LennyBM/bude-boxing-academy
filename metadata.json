@@ -1,0 +1,7 @@
+{
+  "name": "Bude Boxing Academy",
+  "description": "A modern, community-focused website for Bude Boxing Academy in Cornwall, UK, featuring their green and black brand identity, class schedules, and programs.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
