@@ -23,10 +23,6 @@ const Home: React.FC = () => {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left w-full">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-brandGreen text-brandBlack font-bold rounded-full text-xs uppercase tracking-tighter mb-6 animate-pulse">
-            <MapPin size={14} />
-            Bude, Cornwall
-          </div>
           <h1 className="text-5xl sm:text-6xl md:text-8xl font-black text-white leading-tight tracking-tighter mb-4 md:mb-6">
             TRAIN WITH<br /><span className="text-brandGreen">PURPOSE</span>
           </h1>

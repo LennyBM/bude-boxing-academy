@@ -8,6 +8,7 @@ import About from './pages/About';
 import Schedule from './pages/Schedule';
 import Pricing from './pages/Pricing';
 import Contact from './pages/Contact';
+import VideoPage from './pages/Video';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import CookieBanner from './components/CookieBanner';
@@ -32,6 +33,7 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/video" element={<VideoPage />} />
             <Route path="/schedule" element={<Schedule />} />
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/contact" element={<Contact />} />
