@@ -69,7 +69,7 @@ const Privacy: React.FC = () => {
                             <li>Right to withdraw consent.</li>
                         </ul>
                         <p className="mt-4">
-                            If you wish to exercise any of the rights set out above, please contact us at shayes@bude-stratton.gov.uk.
+                            If you wish to exercise any of the rights set out above, please contact us at budeboxing@gmail.com.
                         </p>
                     </section>
                 </div>
