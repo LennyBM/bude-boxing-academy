@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 
 const Pricing: React.FC = () => {
   return (
-    <div className="pt-24 min-h-screen bg-brandBlack">
+    <div className="min-h-screen bg-brandBlack">
       <div className="py-20 bg-brandDarkGrey border-b border-brandGreen/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-6xl md:text-8xl font-black text-white uppercase mb-4 tracking-tighter">PRICING</h1>
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-black text-white uppercase mb-4 tracking-tighter">PRICING</h1>
           <p className="text-brandGreen font-bold text-xl uppercase tracking-widest">AFFORDABLE ACCESS TO BOXING</p>
         </div>
       </div>
@@ -17,7 +17,7 @@ const Pricing: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
           {/* Monthly */}
           <div className="bg-brandDarkGrey p-12 border-t-8 border-brandGreen flex flex-col justify-between rounded-sm relative overflow-hidden group">
-            <div className="absolute top-0 right-0 p-8 text-white/5 pointer-events-none group-hover:text-brandGreen/10 transition-colors">
+            <div className="absolute top-0 right-0 p-8 text-white/20 pointer-events-none group-hover:text-brandGreen/30 transition-colors">
               <Check size={120} />
             </div>
             <div>
@@ -109,9 +109,9 @@ const Pricing: React.FC = () => {
       {/* Free Trial Banner */}
       <section className="py-24 bg-brandGreen text-brandBlack text-center">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-4xl md:text-6xl font-black uppercase mb-6">NEW TO BOXING?</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-black uppercase mb-4 sm:mb-6 leading-tight">NEW TO BOXING?</h2>
           <p className="text-xl font-bold uppercase tracking-widest mb-10 opacity-80">YOUR FIRST SESSION IS COMPLETELY FREE</p>
-          <Link to="/contact" className="inline-block px-12 py-5 bg-brandBlack text-brandGreen font-black text-xl rounded-sm uppercase tracking-tighter hover:scale-105 transition-all">
+          <Link to="/contact" className="inline-block w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 bg-brandBlack text-brandGreen font-black text-lg sm:text-xl rounded-sm uppercase tracking-tighter hover:scale-105 transition-all">
             Get Your Free Pass
           </Link>
         </div>

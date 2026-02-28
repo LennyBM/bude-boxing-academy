@@ -20,7 +20,6 @@ const Navbar: React.FC = () => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'Programs', path: '/programs' },
     { name: 'Schedule', path: '/schedule' },
     { name: 'Pricing', path: '/pricing' },
     { name: 'Contact', path: '/contact' },
@@ -47,9 +46,9 @@ const Navbar: React.FC = () => {
             ))}
             <Link
               to="/contact"
-              className="bg-brandGreen hover:bg-green-300 text-brandBlack font-black px-8 py-3 rounded-sm transition-all text-sm uppercase tracking-tighter transform hover:scale-110 shadow-lg shadow-brandGreen/20"
+              className="bg-brandGreen hover:bg-green-300 text-brandBlack font-black px-6 py-3 rounded-sm transition-all text-sm uppercase tracking-tighter transform hover:scale-110 text-center"
             >
-              Book Free Trial
+              Book Free Trial Session
             </Link>
           </div>
 
@@ -82,9 +81,9 @@ const Navbar: React.FC = () => {
             <Link
               to="/contact"
               onClick={() => setIsOpen(false)}
-              className="block w-full text-center bg-brandGreen text-brandBlack font-black py-5 rounded-sm uppercase tracking-tighter text-lg"
+              className="block w-full text-center bg-brandGreen text-brandBlack font-black py-4 rounded-sm uppercase tracking-tighter text-base"
             >
-              Book Free Trial
+              Book Free Trial Session
             </Link>
           </div>
         </div>

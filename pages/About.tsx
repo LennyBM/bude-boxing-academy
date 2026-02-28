@@ -4,14 +4,17 @@ import { Target, Shield, Heart, Users } from 'lucide-react';
 
 const About: React.FC = () => {
   return (
-    <div className="pt-24 min-h-screen bg-brandBlack">
+    <div className="min-h-screen bg-brandBlack">
       {/* Hero Header */}
-      <div className="relative py-32 flex items-center justify-center overflow-hidden">
+      <div className="relative py-32 h-[calc(100vh+6rem)] md:h-[calc(100vh+8rem)] -mt-24 md:-mt-32 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1517438476312-10d79c67750d?auto=format&fit=crop&q=80&w=2000"
-            className="w-full h-full object-cover opacity-30 grayscale"
-            alt="Gym background"
+          <video
+            src="https://www.dropbox.com/scl/fi/rv2egf4lgzsijxd752yy0/Bude_Boxing_Ac_Promo_01.mp4?rlkey=9g53r85cg9jw4t9qsfqnzdfjf&st=2e2zyz2l&raw=1"
+            className="w-full h-full object-cover opacity-50 grayscale"
+            autoPlay
+            loop
+            muted
+            playsInline
           />
           <div className="absolute inset-0 bg-brandBlack/60"></div>
         </div>
@@ -39,8 +42,8 @@ const About: React.FC = () => {
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&q=80&w=600" className="rounded-sm grayscale hover:grayscale-0 transition-all duration-500" alt="Training" />
-            <img src="https://images.unsplash.com/photo-1554117518-30dd5fb7a940?auto=format&fit=crop&q=80&w=600" className="rounded-sm mt-8 grayscale hover:grayscale-0 transition-all duration-500" alt="Action" />
+            <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&q=80&w=600" className="rounded-sm grayscale hover:grayscale-0 transition-all duration-500" alt="Members training on heavy bags" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1554117518-30dd5fb7a940?auto=format&fit=crop&q=80&w=600" className="rounded-sm mt-8 grayscale hover:grayscale-0 transition-all duration-500" alt="Boxer wrapping hands" loading="lazy" />
           </div>
         </div>
       </section>
@@ -69,7 +72,7 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Community Callout */}
       <section className="py-24 text-center">
         <div className="max-w-4xl mx-auto px-4">
@@ -77,8 +80,8 @@ const About: React.FC = () => {
           <p className="text-gray-400 text-xl mb-10 leading-relaxed">
             Your first class is on us. Come down, meet the coaches, and experience the BBA atmosphere for yourself.
           </p>
-          <button className="px-10 py-4 bg-brandGreen text-brandBlack font-black rounded-sm uppercase tracking-tighter hover:bg-green-600 transition-all text-lg">
-            Start Your Free Trial
+          <button className="px-8 py-4 bg-brandGreen text-brandBlack font-black rounded-sm uppercase tracking-tighter hover:bg-green-600 transition-all text-base md:text-lg w-full md:w-auto">
+            Book Free Trial Session
           </button>
         </div>
       </section>

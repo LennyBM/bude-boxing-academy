@@ -28,7 +28,7 @@ export const PROGRAMS: Program[] = [
     title: 'Seniors (16+)',
     description: 'Adult sessions tailored for all levels, from competitive boxers to hobbyists.',
     icon: 'award',
-    image: 'https://images.unsplash.com/photo-1517438476312-10d79c67750d?auto=format&fit=crop&q=80&w=800'
+    image: 'https://images.unsplash.com/photo-1552072092-7f9b8d63efcb?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: 'personal-training',
@@ -47,32 +47,32 @@ export const PROGRAMS: Program[] = [
 ];
 
 export const SCHEDULE: ScheduleItem[] = [
-  { 
-    day: 'Monday', 
+  {
+    day: 'Monday',
     status: 'Open',
     classes: [
       { time: '18:00 - 19:00', label: 'Youths (10-15)' },
       { time: '19:00 - 20:30', label: 'Seniors (16+)' }
-    ] 
+    ]
   },
   { day: 'Tuesday', status: 'Closed', classes: [] },
-  { 
-    day: 'Wednesday', 
+  {
+    day: 'Wednesday',
     status: 'Open',
     classes: [
       { time: '18:00 - 19:00', label: 'Youths (10-15)' },
       { time: '19:00 - 20:30', label: 'Seniors (16+)' }
-    ] 
+    ]
   },
   { day: 'Thursday', status: 'Closed', classes: [] },
   { day: 'Friday', status: 'Closed', classes: [] },
-  { 
-    day: 'Saturday', 
+  {
+    day: 'Saturday',
     status: 'Open',
     classes: [
       { time: '10:00 - 11:00', label: 'Youths (10-15)' },
       { time: '11:00 - 12:30', label: 'Seniors (16+)' }
-    ] 
+    ]
   },
   { day: 'Sunday', status: 'Closed', classes: [] }
 ];

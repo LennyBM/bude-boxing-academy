@@ -5,20 +5,20 @@ import { Activity, Target, Users, Award, User, Sun, MapPin, Clock, ArrowRight, Q
 import { PROGRAMS, SCHEDULE, COACHES, TESTIMONIALS } from '../constants';
 
 const Home: React.FC = () => {
-  // Using raw=1 for Dropbox to ensure direct image access
-  const heroImageUrl = "https://www.dropbox.com/scl/fi/wugfqzpckk1ss7543a0co/budeboxin111.jpg?rlkey=dh7275aq510taz532n0zjobcf&st=dp83vhv4&raw=1";
-
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center">
+      <section className="relative h-[calc(100vh+6rem)] md:h-[calc(100vh+8rem)] -mt-24 md:-mt-32 flex items-center justify-center">
         <div className="absolute inset-0 z-0">
-          <img
-            src={heroImageUrl}
+          <video
+            src="https://www.dropbox.com/scl/fi/rv2egf4lgzsijxd752yy0/Bude_Boxing_Ac_Promo_01.mp4?rlkey=9g53r85cg9jw4t9qsfqnzdfjf&st=2e2zyz2l&raw=1"
             className="w-full h-full object-cover object-[85%_center]"
-            alt="Bude Boxing Academy Hero"
+            autoPlay
+            loop
+            muted
+            playsInline
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-brandBlack via-brandBlack/60 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-brandBlack/90 via-brandBlack/50 to-transparent"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left w-full">
@@ -26,22 +26,22 @@ const Home: React.FC = () => {
             <MapPin size={14} />
             Bude, Cornwall
           </div>
-          <h1 className="text-5xl md:text-8xl font-black text-white leading-tight tracking-tighter mb-6">
-            BUDE BOXING<br /><span className="text-brandGreen">ACADEMY</span>
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-black text-white leading-tight tracking-tighter mb-4 md:mb-6">
+            TRAIN WITH<br /><span className="text-brandGreen">PURPOSE</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mb-10 leading-relaxed font-medium">
-            Train Hard. Build Community. Transform Your Life. The ultimate training destination in Bude.
+            Train Hard. Build Community. Transform Your Life. The ultimate training destination.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <Link
               to="/contact"
-              className="px-8 py-4 bg-brandGreen hover:bg-green-400 text-brandBlack font-black text-lg rounded-sm uppercase tracking-tighter transition-all transform hover:scale-105"
+              className="px-6 py-4 bg-brandGreen hover:bg-green-400 text-brandBlack font-black text-base md:text-lg rounded-sm uppercase tracking-tighter transition-all transform hover:scale-105"
             >
-              Book Free Trial Class
+              Book Free Trial Session
             </Link>
             <Link
               to="/schedule"
-              className="px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-brandBlack font-black text-lg rounded-sm uppercase tracking-tighter transition-all"
+              className="px-6 py-4 border-2 border-white text-white hover:bg-white hover:text-brandBlack font-black text-base md:text-lg rounded-sm uppercase tracking-tighter transition-all block text-center"
             >
               View Class Schedule
             </Link>
@@ -76,36 +76,7 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Programs Grid */}
-      <section className="py-24 bg-brandDarkGrey">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-            <div>
-              <h2 className="text-brandGreen text-lg font-bold tracking-[0.3em] mb-4 uppercase">CHOOSE YOUR PATH</h2>
-              <h3 className="text-4xl md:text-6xl font-black text-white uppercase">OUR PROGRAMS</h3>
-            </div>
-            <Link to="/programs" className="text-brandGreen font-bold flex items-center gap-2 hover:gap-4 transition-all uppercase tracking-widest text-sm">
-              View All Programs <ArrowRight size={20} />
-            </Link>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {PROGRAMS.map((program) => (
-              <div key={program.id} className="relative h-96 group overflow-hidden border border-white/5 rounded-sm">
-                <img src={program.image} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt={program.title} />
-                <div className="absolute inset-0 bg-gradient-to-t from-brandBlack via-brandBlack/40 to-transparent opacity-90"></div>
-                <div className="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform">
-                  <h4 className="text-3xl font-black text-white mb-2 uppercase">{program.title}</h4>
-                  <p className="text-gray-300 text-sm mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">{program.description}</p>
-                  <Link to="/programs" className="inline-block py-2 px-6 bg-brandGreen text-brandBlack font-bold text-xs uppercase tracking-widest rounded-sm transform hover:scale-105 transition-all">
-                    Learn More
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Quick Schedule Section */}
       <section className="py-24 bg-brandBlack">
@@ -115,24 +86,27 @@ const Home: React.FC = () => {
               <div className="p-12 lg:p-20">
                 <h2 className="text-brandGreen text-lg font-bold tracking-[0.3em] mb-4 uppercase">TRAINING TIMES</h2>
                 <h3 className="text-4xl md:text-5xl font-black text-white mb-10 uppercase leading-tight">THIS WEEK'S<br />SCHEDULE</h3>
-                
+
                 <div className="space-y-6">
                   {SCHEDULE.filter(s => s.status === 'Open').map((item, i) => (
-                    <div key={i} className="flex gap-6 pb-6 border-b border-white/5 last:border-0">
-                      <div className="text-brandGreen font-black text-xl uppercase w-24">{item.day}</div>
-                      <div className="space-y-2">
+                    <div key={i} className="flex flex-col sm:flex-row gap-2 sm:gap-6 pb-6 border-b border-white/5 last:border-0">
+                      <div className="text-brandGreen font-black text-lg sm:text-xl uppercase w-full sm:w-24">{item.day}</div>
+                      <div className="space-y-3 sm:space-y-2">
                         {item.classes.map((cls, idx) => (
-                          <div key={idx} className="flex items-center gap-3 text-white">
-                            <Clock size={16} className="text-brandGreen" />
-                            <span className="font-bold">{cls.time}</span>
-                            <span className="text-gray-400 text-sm">— {cls.label}</span>
+                          <div key={idx} className="flex items-start sm:items-center gap-3 text-white">
+                            <Clock size={16} className="text-brandGreen mt-1 sm:mt-0 flex-shrink-0" />
+                            <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
+                              <span className="font-bold">{cls.time}</span>
+                              <span className="text-gray-400 text-sm sm:inline hidden">—</span>
+                              <span className="text-gray-400 text-sm">{cls.label}</span>
+                            </div>
                           </div>
                         ))}
                       </div>
                     </div>
                   ))}
                 </div>
-                
+
                 <div className="mt-12 bg-brandBlack/50 p-6 rounded-sm border-l-4 border-brandGreen">
                   <p className="text-white font-bold mb-2">Monthly Membership: £38/month</p>
                   <p className="text-gray-400 text-sm">Walk-in session: £7/each</p>
@@ -140,9 +114,10 @@ const Home: React.FC = () => {
               </div>
               <div className="hidden lg:block relative">
                 <img
-                  src="https://images.unsplash.com/photo-1552072092-7f9b8d63efcb?auto=format&fit=crop&q=80&w=1000"
+                  src="/assets/empty-ring.jpg"
                   className="absolute inset-0 w-full h-full object-cover grayscale brightness-75 hover:grayscale-0 transition-all duration-700"
-                  alt="Boxing gym schedule"
+                  alt="Empty boxing ring at Bude Boxing Academy"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -151,39 +126,14 @@ const Home: React.FC = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 bg-brandDarkGrey relative overflow-hidden">
-        <div className="absolute top-0 right-0 opacity-5 pointer-events-none">
-          <Quote size={400} className="text-brandGreen" />
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-brandGreen text-lg font-bold tracking-[0.3em] mb-4 uppercase">FEEDBACK</h2>
-            <h3 className="text-4xl md:text-6xl font-black text-white uppercase">WHAT OUR MEMBERS SAY</h3>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {TESTIMONIALS.map((t) => (
-              <div key={t.id} className="bg-brandBlack p-10 relative rounded-sm border border-white/5">
-                <div className="flex gap-1 text-brandGreen mb-6">
-                  {[...Array(t.rating)].map((_, i) => <Award key={i} size={16} />)}
-                </div>
-                <p className="text-gray-300 italic mb-8 leading-relaxed">"{t.text}"</p>
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-1 bg-brandGreen"></div>
-                  <span className="text-white font-bold uppercase tracking-widest">{t.name}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Community Image Banner */}
       <section className="relative h-[60vh] flex items-center justify-center group">
         <img
-          src="https://images.unsplash.com/photo-1549476464-37392f717541?auto=format&fit=crop&q=80&w=2000"
+          src="/assets/group-photo.jpg"
           className="absolute inset-0 w-full h-full object-cover"
-          alt="BBA Community Group"
+          alt="BBA Community Group Training"
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-brandBlack/60 group-hover:bg-brandBlack/40 transition-all"></div>
         <div className="relative text-center px-4">
@@ -200,7 +150,7 @@ const Home: React.FC = () => {
               <h2 className="text-brandGreen text-lg font-bold tracking-[0.3em] mb-4 uppercase">FIND US</h2>
               <h3 className="text-4xl md:text-6xl font-black text-white mb-8 uppercase">IN BUDE</h3>
               <p className="text-gray-400 text-lg mb-10">We are located in the heart of Kings Hill Industrial Estate. An authentic industrial space designed for training hard.</p>
-              
+
               <div className="space-y-6 mb-12">
                 <div className="flex items-start gap-4">
                   <MapPin size={24} className="text-brandGreen flex-shrink-0" />
@@ -217,7 +167,7 @@ const Home: React.FC = () => {
                   </div>
                 </div>
               </div>
-              
+
               <a
                 href="https://maps.google.com"
                 target="_blank"
@@ -227,7 +177,7 @@ const Home: React.FC = () => {
                 Get Directions
               </a>
             </div>
-            
+
             <div className="h-[400px] bg-brandDarkGrey rounded-sm overflow-hidden border border-brandGreen/20">
               <iframe
                 title="Bude Boxing Academy Location"

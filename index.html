@@ -1,51 +1,69 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bude Boxing Academy | Cornwall Community Gym</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brandGreen: '#4ade80', // More vibrant, modern sports green
-              brandBlack: '#0a0a0a',
-              brandDarkGrey: '#141414',
-            },
-            fontFamily: {
-              heading: ['Oswald', 'sans-serif'],
-              body: ['Montserrat', 'sans-serif'],
-            }
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bude Boxing Academy | Premier Boxing Gym in Cornwall, UK</title>
+  <meta name="description"
+    content="Join Bude Boxing Academy, Cornwall's premier community boxing gym. Training for all levels from beginners to competitive fighters in our authentic industrial facility." />
+  <meta name="keywords" content="boxing, gym, bude, cornwall, boxing academy, fitness, training, martial arts" />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Oswald:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandGreen: '#4ade80', // More vibrant, modern sports green
+            brandBlack: '#0a0a0a',
+            brandDarkGrey: '#141414',
+          },
+          fontFamily: {
+            heading: ['Oswald', 'sans-serif'],
+            body: ['Montserrat', 'sans-serif'],
+          },
+          borderRadius: {
+            'sm': '1rem', // Softer, more modern corners instead of rigid boxes
           }
         }
       }
-    </script>
-    <style>
-      body {
-        background-color: #0a0a0a;
-        color: #F5F5F5;
-        font-family: 'Montserrat', sans-serif;
-      }
-      h1, h2, h3, h4, h5, h6 {
-        font-family: 'Oswald', sans-serif;
-        text-transform: uppercase;
-      }
-      .gritty-overlay {
-        background-image: linear-gradient(to bottom, rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.9)), url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
-      }
-      .card-hover:hover {
-        transform: translateY(-5px);
-        transition: all 0.3s ease;
-      }
-      ::selection {
-        background-color: #4ade80;
-        color: #0a0a0a;
-      }
-    </style>
+    }
+  </script>
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #F5F5F5;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+    }
+
+    .gritty-overlay {
+      background-image: linear-gradient(to bottom, rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.9)), url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+    }
+
+    .card-hover:hover {
+      transform: translateY(-5px);
+      transition: all 0.3s ease;
+    }
+
+    ::selection {
+      background-color: #4ade80;
+      color: #0a0a0a;
+    }
+  </style>
   <script type="importmap">
 {
   "imports": {
@@ -57,10 +75,12 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/index.css">
 </head>
-  <body>
-    <div id="root"></div>
+
+<body>
+  <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>

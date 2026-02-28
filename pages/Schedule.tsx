@@ -5,7 +5,7 @@ import { SCHEDULE } from '../constants';
 
 const Schedule: React.FC = () => {
   return (
-    <div className="pt-24 min-h-screen bg-brandBlack">
+    <div className="min-h-screen bg-brandBlack">
       <div className="py-20 bg-brandDarkGrey border-b border-brandGreen/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-6xl md:text-8xl font-black text-white uppercase mb-4 tracking-tighter">SCHEDULE</h1>

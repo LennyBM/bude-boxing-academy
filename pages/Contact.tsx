@@ -1,13 +1,13 @@
 
 import React from 'react';
-import { Mail, Phone, MapPin, Send, Facebook, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Facebook, MessageCircle } from 'lucide-react';
 
 const Contact: React.FC = () => {
   return (
-    <div className="pt-24 min-h-screen bg-brandBlack">
+    <div className="min-h-screen bg-brandBlack">
       <div className="py-20 bg-brandDarkGrey border-b border-brandGreen/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-6xl md:text-8xl font-black text-white uppercase mb-4 tracking-tighter">CONTACT US</h1>
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-black text-white uppercase mb-4 tracking-tighter">CONTACT US</h1>
           <p className="text-brandGreen font-bold text-xl uppercase tracking-widest">GET IN THE RING</p>
         </div>
       </div>
@@ -18,7 +18,7 @@ const Contact: React.FC = () => {
           <div className="space-y-12">
             <div>
               <h2 className="text-brandGreen text-lg font-bold tracking-[0.3em] mb-4 uppercase text-center lg:text-left">LET'S CONNECT</h2>
-              <h3 className="text-4xl md:text-5xl font-black text-white uppercase mb-8 leading-tight text-center lg:text-left">HAVE QUESTIONS?<br />GET IN TOUCH.</h3>
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-white uppercase mb-6 sm:mb-8 leading-tight text-center lg:text-left">HAVE QUESTIONS?<br />GET IN TOUCH.</h3>
               <p className="text-gray-400 text-lg leading-relaxed text-center lg:text-left">
                 We're always here to help you start your journey. Whether it's pricing, schedule questions, or just getting directions, we'll get back to you as soon as possible.
               </p>
@@ -56,13 +56,15 @@ const Contact: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex justify-center lg:justify-start gap-6">
-              <a href="#" className="p-4 bg-brandDarkGrey text-white hover:bg-brandGreen hover:text-brandBlack rounded-sm transition-all flex items-center gap-3 font-bold uppercase tracking-widest text-xs">
-                <Facebook size={20} /> Facebook
+            <div className="flex flex-col gap-4">
+              <a href="https://wa.me/447422337714" className="w-full md:w-auto inline-flex justify-center lg:justify-start p-6 bg-[#25D366] text-white hover:bg-[#128C7E] rounded-sm transition-all items-center gap-4 font-black uppercase tracking-widest text-xl shadow-2xl hover:scale-105" target="_blank" rel="noopener noreferrer">
+                <MessageCircle size={28} /> Chat on WhatsApp
               </a>
-              <a href="#" className="p-4 bg-brandDarkGrey text-white hover:bg-brandGreen hover:text-brandBlack rounded-sm transition-all flex items-center gap-3 font-bold uppercase tracking-widest text-xs">
-                <Instagram size={20} /> Instagram
-              </a>
+              <div className="flex justify-center lg:justify-start mt-2">
+                <a href="https://www.facebook.com/BudeBoxingAcademy" className="p-4 bg-brandDarkGrey text-white hover:bg-brandGreen hover:text-brandBlack rounded-sm transition-all flex items-center gap-3 font-bold uppercase tracking-widest text-xs" target="_blank" rel="noopener noreferrer">
+                  <Facebook size={20} /> Facebook
+                </a>
+              </div>
             </div>
           </div>
 
@@ -91,7 +93,7 @@ const Contact: React.FC = () => {
               <div>
                 <label className="block text-gray-400 text-xs font-bold uppercase tracking-widest mb-2">Subject</label>
                 <select className="w-full bg-brandBlack border border-white/10 rounded-sm px-4 py-4 text-white focus:outline-none focus:border-brandGreen transition-all">
-                  <option>Free Trial Class Inquiry</option>
+                  <option>Free Trial Session Inquiry</option>
                   <option>Monthly Membership</option>
                   <option>Youth Programs</option>
                   <option>Personal Training</option>
