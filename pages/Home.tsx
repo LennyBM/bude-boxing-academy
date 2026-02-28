@@ -12,7 +12,8 @@ const Home: React.FC = () => {
         <div className="absolute inset-0 z-0">
           <video
             src="https://www.dropbox.com/scl/fi/rv2egf4lgzsijxd752yy0/Bude_Boxing_Ac_Promo_01.mp4?rlkey=9g53r85cg9jw4t9qsfqnzdfjf&st=2e2zyz2l&raw=1"
-            className="w-full h-full object-cover object-[85%_center]"
+            className="w-full h-full object-cover object-center"
+            poster="/assets/empty-ring.jpg"
             autoPlay
             loop
             muted
